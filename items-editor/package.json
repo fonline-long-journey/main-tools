@@ -1,6 +1,7 @@
 {
   "name": "items-editor",
   "version": "0.1.0",
+  "author": "Azein",
   "private": true,
   "main": "public/electron.js",
   "dependencies": {
