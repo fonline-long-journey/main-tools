@@ -9,7 +9,8 @@ Steps to start working:
 
 Then do
 
-```yarn install
+```
+yarn install
 yarn run start dev
 ```
 
