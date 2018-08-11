@@ -1,5 +1,5 @@
 const RootReducer = () => ({
-  x: "xd";
-});
+  x: 'xd',
+})
 
-export default RootReducer;
+export default RootReducer
