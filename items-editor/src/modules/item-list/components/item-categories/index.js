@@ -1,15 +1,23 @@
+// @flow
+
 import React from 'react'
 import { connect } from 'react-redux'
 import { map } from 'ramda'
 import { Container, StyledButton } from './styled'
 import { categoriesSelector } from '../../selectors'
 import { selectCategory } from '../../ducks'
+import type { Category } from '../../ducks'
 
-const CategoryButton = ({ name, ...props }) => (
+const CategoryButton = ({ name, ...props }: Category) => (
   <StyledButton {...props}>{name}</StyledButton>
 )
 
-const ItemCategories = ({ categories, select }) => (
+type Props = {
+  categories: Category[],
+  select: ({ id: string }) => void,
+}
+
+const ItemCategories = ({ categories, select }: Props) => (
   <Container>
     {map(
       category => (

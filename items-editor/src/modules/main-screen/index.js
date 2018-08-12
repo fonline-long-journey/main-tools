@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Layout } from 'ui/components/Layout'
 import ItemList from 'modules/item-list'
+import ItemScreen from 'modules/item-screen'
 
 const Header = styled(Layout)`
   width:: 100%;
@@ -22,9 +23,10 @@ const HorizontalContainer = styled(Layout)`
 
 const MainScreen = () => (
   <Layout>
-    <Header> Items Editor</Header>
+    <Header>Items Editor</Header>
     <HorizontalContainer>
       <ItemList />
+      <ItemScreen />
     </HorizontalContainer>
   </Layout>
 )

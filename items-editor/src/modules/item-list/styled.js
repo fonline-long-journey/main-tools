@@ -6,5 +6,5 @@ export const ListSidebar = styled(Layout)`
   width: 500px;
   flex-shrink: 0;
   flex-grow: 0;
-  border-right: ${({ theme }) => `2px solid ${theme.color.darkestGray}`};
+  border-right: ${({ theme }) => `2px solid ${theme.color.darkestGrey}`};
 `
