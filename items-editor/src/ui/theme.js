@@ -8,6 +8,9 @@ const color = {
   darkerTeal: '#00796B',
   darkerGrey: '#424242',
   darkestGrey: '#212121',
+  darkerBlueGray: '#37474F',
+  lighterBlueGray: '#CFD8DC',
+  darkestBlueGray: '#263238',
 }
 
 export { color }
