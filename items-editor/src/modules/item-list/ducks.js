@@ -1,6 +1,9 @@
 // @flow
 import { createReducer } from 'redux-act'
 import createAction from 'helpers/redux/create-action'
+import { parsedItems } from 'data/proto-items'
+
+console.info(parsedItems)
 
 export const STATE_KEY = 'itemList'
 
