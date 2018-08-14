@@ -6,8 +6,10 @@
   "main": "public/electron.js",
   "dependencies": {
     "@atlaskit/button": "^9.0.5",
+    "@atlaskit/spinner": "^9.0.5",
     "electron-is-dev": "^0.3.0",
     "final-form": "^4.9.1",
+    "localforage": "^1.7.2",
     "normalize.css": "^8.0.0",
     "polished": "^1.9.3",
     "ramda": "^0.25.0",
