@@ -1,0 +1,19 @@
+History of Sprite Creator:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version:
+1.1.0.2		Fixed bug that causes wrong order of images after importing bitmaps with help
+		of batch processing.
+
+1.1.0.1		Now SC is able to import all bitmaps from selected directory to a collection
+		in one moment.
+
+1.0.0.4		Fixed bug where direction change doesn't enable or disable "Delete" buttons
+                of "Image Layers" tab.
+
+1.0.0.3		Replaced old zlib 1.0.4 compression library with newest zlib 1.2.3.
+                Increased speed of decompression and compression.
+
+1.0.0.2		Fixed bug when application's background colour didn't change.
+                This could be noticed if "SPR" file wasn't opened.
+
+1.0.0.1		First relase. Fully functional.
