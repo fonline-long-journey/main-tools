@@ -2,6 +2,8 @@
 import React from 'react'
 import Spinner from '@atlaskit/spinner'
 import { Redirect } from 'react-router-dom'
+import { forEachObjIndexed } from 'ramda'
+import { parsedItems, saveItem } from 'data/proto-items'
 import { InitContainer, SpinnerContainer, LoadingMessage } from './styled'
 
 const Loading = () => (
@@ -23,11 +25,10 @@ class AppInit extends React.Component<void, State> {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        processingComplete: true,
-      })
-    }, 5000)
+    forEachObjIndexed(saveItem, parsedItems)
+    this.setState({
+      processingComplete: true,
+    })
   }
   render() {
     const { processingComplete } = this.state
