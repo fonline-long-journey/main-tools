@@ -1,14 +1,12 @@
 // @flow
 import { createReducer } from 'redux-act'
 import createAction from 'helpers/redux/create-action'
-import { parsedItems } from 'data/proto-items'
 
 export const STATE_KEY = 'itemList'
 
 export type Category = {
   id: number | string,
   name: string,
-  isSelected?: boolean,
 }
 
 type Categories = {

@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { values, pipe } from 'ramda'
+import { values, pipe, path } from 'ramda'
 import { STATE_KEY } from './ducks'
 
 const getCategories = state => state[STATE_KEY].categories
@@ -16,4 +16,9 @@ export const categoriesSelector = createSelector(
       : categories),
     enhancedCategories => values(enhancedCategories),
   )(categories),
+)
+
+export const itemsSelector = createSelector(
+  [getCategories, getSelected],
+  (categories, selected) => pipe(path([selected, 'items']))(categories),
 )

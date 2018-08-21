@@ -67,9 +67,11 @@ class AppInit extends React.Component<void, State> {
     saveItemsToIDB()
     const namedCategories = getCategories()
     initCategories({ categories: namedCategories })
-    this.setState({
-      processingComplete: true,
-    })
+    setTimeout(() => {
+      this.setState({
+        processingComplete: true,
+      })
+    }, 1500)
   }
 
   render() {

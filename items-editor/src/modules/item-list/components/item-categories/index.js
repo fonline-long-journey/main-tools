@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { map } from 'ramda'
 import { Container, StyledButton } from './styled'
 import { categoriesSelector } from '../../selectors'
@@ -19,15 +20,19 @@ type Props = {
 
 const ItemCategories = ({ categories, select }: Props) => (
   <Container>
-    {map(
-      category => (
-        <CategoryButton
-          key={category.id}
-          onClick={() => select({ id: category.id })}
-          {...category}
-        />
-      ),
-      categories,
+    {categories.length ? (
+      map(
+        category => (
+          <CategoryButton
+            key={category.id}
+            onClick={() => select({ id: category.id })}
+            {...category}
+          />
+        ),
+        categories,
+      )
+    ) : (
+      <Redirect to="/" />
     )}
   </Container>
 )

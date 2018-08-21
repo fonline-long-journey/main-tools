@@ -11,6 +11,7 @@ const color = {
   darkerBlueGray: '#37474F',
   lighterBlueGray: '#CFD8DC',
   darkestBlueGray: '#263238',
+  mediumBlueGray: '#607D8B',
 }
 
 export { color }
