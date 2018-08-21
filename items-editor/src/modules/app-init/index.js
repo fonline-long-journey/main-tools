@@ -4,35 +4,26 @@ import { connect } from 'react-redux'
 import Spinner from '@atlaskit/spinner'
 import { Redirect } from 'react-router-dom'
 import {
-  forEachObjIndexed,
-  mapObjIndexed,
-  map,
-  pipe,
-  assoc,
-  assocPath,
-  reduce,
-  toPairs,
-  values,
-  groupBy,
+  forEachObjIndexed, mapObjIndexed, pipe, values, groupBy,
 } from 'ramda'
 import { parsedItems, saveItem } from 'data/proto-items'
 import { setCategories } from 'modules/item-list/ducks'
 import { InitContainer, SpinnerContainer, LoadingMessage } from './styled'
 
 const CAT_NAMES = {
-  '1': 'Armor',
-  '2': 'Consumables',
-  '3': 'Weapons',
-  '4': 'Ammo',
-  '5': 'Misc',
-  '6': 'Transport',
-  '7': 'Keycards',
-  '8': 'Containers',
-  '9': 'Doors',
-  '10': 'Portals',
-  '11': 'Env objects',
-  '12': 'Walls',
-  '13': 'No idea',
+  1: 'Armor',
+  2: 'Consumables',
+  3: 'Weapons',
+  4: 'Ammo',
+  5: 'Misc',
+  6: 'Transport',
+  7: 'Keycards',
+  8: 'Containers',
+  9: 'Doors',
+  10: 'Portals',
+  11: 'Env objects',
+  12: 'Walls',
+  13: 'No idea',
 }
 
 const saveItemsToIDB = () => {
@@ -47,12 +38,11 @@ const addMeta = (itemArray, key) => ({
   name: key,
 })
 
-const getCategories = () =>
-  pipe(
-    values,
-    groupBy(byCategoryName),
-    mapObjIndexed(addMeta),
-  )(parsedItems)
+const getCategories = () => pipe(
+  values,
+  groupBy(byCategoryName),
+  mapObjIndexed(addMeta),
+)(parsedItems)
 
 const Loading = () => (
   <InitContainer>
@@ -81,6 +71,7 @@ class AppInit extends React.Component<void, State> {
       processingComplete: true,
     })
   }
+
   render() {
     const { processingComplete } = this.state
     return processingComplete ? <Redirect to="/main" /> : <Loading />
