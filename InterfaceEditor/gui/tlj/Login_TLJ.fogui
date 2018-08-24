@@ -321,7 +321,7 @@
         {
           "$type": "Button",
           "IsDisabled": false,
-          "PressedImage": "art/intrface2/ok2.png",
+          "PressedImage": "art/intrface/ok2.png",
           "PressedImageLayout": "None",
           "HoverImage": null,
           "HoverImageLayout": "None",

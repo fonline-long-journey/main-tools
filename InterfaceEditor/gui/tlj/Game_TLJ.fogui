@@ -567,7 +567,7 @@
               "NormalColor": null,
               "FocusedColor": null,
               "Expanded": false,
-              "Selected": true,
+              "Selected": false,
               "Active": false,
               "Name": "ConsoleText",
               "Position": "13, 13",
@@ -958,7 +958,7 @@
           "BackgroundImage": null,
           "BackgroundImageLayout": "None",
           "Expanded": false,
-          "Selected": false,
+          "Selected": true,
           "Active": true,
           "Name": "Map",
           "Position": "163, 91",
@@ -1901,7 +1901,7 @@
                       "OnHoverChanged": null,
                       "OnDragChanged": null,
                       "OnResizeGrid": null,
-                      "OnDrawItem": "uint max  = 0;\r\nuint curr = 0;\r\nif( item !is null )\r\n{\r\n    if( item.GetType() == ITEM_TYPE_WEAPON && item.Proto.Weapon_MaxAmmoCount > 0 )\r\n    {\r\n        max  = item.Proto.Weapon_MaxAmmoCount;\r\n        curr = item.AmmoCount;\r\n    }\r\n    else\r\n    {\r\n        max  = item.Proto.IndicatorMax;\r\n        curr = item.Indicator;\r\n    }\r\n    if(max > 0 && curr <= max && curr >= 0){\r\n        max += 1;\r\n        uint barWidth     = floor( get_Width() * curr / max );\r\n        uint colorOffsetG = (144-64) * curr / max;\r\n        uint colorOffsetB = (144-18) * curr / max;\r\n        uint colorOffsetA = 128 * curr / max;\r\n        DrawSpritePattern(sprite,-1,AbsolutePosX,AbsolutePosY,barWidth,12,0,0,COLOR_ARGB(128+colorOffsetA,144,144-colorOffsetG,144-colorOffsetB));\r\n    }\r\n}",
+                      "OnDrawItem": "uint max  = 0;\r\nuint curr = 0;\r\nif( item !is null )\r\n{\r\n    if( item.GetType() == ITEM_TYPE_WEAPON && item.Proto.Weapon_MaxAmmoCount > 0 )\r\n    {\r\n        max  = item.Proto.Weapon_MaxAmmoCount;\r\n        curr = item.AmmoCount;\r\n    }\r\n    else\r\n    {\r\n        max  = item.GetCount();\r\n        curr = 1;\r\n        //max  = item.Proto.IndicatorMax;\r\n        //curr = item.Indicator;\r\n    }\r\n    if(max > 0 && curr <= max && curr >= 0){\r\n        max += 1;\r\n        uint barWidth     = floor( get_Width() * curr / max );\r\n        uint colorOffsetG = (144-64) * curr / max;\r\n        uint colorOffsetB = (144-18) * curr / max;\r\n        uint colorOffsetA = 128 * curr / max;\r\n        DrawSpritePattern(sprite,-1,AbsolutePosX,AbsolutePosY,barWidth,12,0,0,COLOR_ARGB(128+colorOffsetA,144,144-colorOffsetG,144-colorOffsetB));\r\n    }\r\n}",
                       "Children": [
                         {
                           "$type": "Text",

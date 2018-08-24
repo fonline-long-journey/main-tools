@@ -2,7 +2,7 @@ CLIENT_MAIN_SCREEN_LOGIN    tlj/Login_TLJ.fogui
 CLIENT_MAIN_SCREEN_REGISTRATION    tlj/Register_TLJ.fogui
 CLIENT_MAIN_SCREEN_CREDITS    *default/Credits.fogui
 CLIENT_MAIN_SCREEN_OPTIONS    tlj/Options_TLJ.fogui
-CLIENT_MAIN_SCREEN_GAME    test/Game_TLJ_ver1.fogui
+CLIENT_MAIN_SCREEN_GAME    tlj/Game_TLJ.fogui
 CLIENT_MAIN_SCREEN_GLOBAL_MAP    *default/GlobalMap.fogui
 CLIENT_MAIN_SCREEN_WAIT    *default/Wait.fogui
 CLIENT_SCREEN_INVENTORY    tlj/Inventory_TLJ.fogui
