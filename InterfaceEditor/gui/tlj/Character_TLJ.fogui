@@ -974,7 +974,7 @@
               "NormalColor": "COLOR_SAND",
               "FocusedColor": null,
               "Expanded": false,
-              "Selected": false,
+              "Selected": true,
               "Active": true,
               "Name": "SkillHeader",
               "Position": "22, -32",

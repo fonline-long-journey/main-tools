@@ -657,7 +657,7 @@
       "BackgroundImage": null,
       "BackgroundImageLayout": "None",
       "Expanded": false,
-      "Selected": false,
+      "Selected": true,
       "Active": true,
       "Name": "Close",
       "Position": "156, 552",
